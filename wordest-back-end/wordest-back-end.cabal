@@ -12,6 +12,7 @@ library
   exposed-modules:
       Add
       Application
+      Error.Handler
       Foundation
       Gameplay
       Home
