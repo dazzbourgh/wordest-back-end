@@ -22,7 +22,8 @@ library
   hs-source-dirs:
       src
   build-depends:
-      array
+      MissingH
+    , array
     , base
     , bytestring
     , bytestring-trie
@@ -37,7 +38,8 @@ executable wordest-back-end
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      array
+      MissingH
+    , array
     , base
     , bytestring
     , bytestring-trie
@@ -55,7 +57,8 @@ test-suite wordest-back-end-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      array
+      MissingH
+    , array
     , base
     , bytestring
     , bytestring-trie

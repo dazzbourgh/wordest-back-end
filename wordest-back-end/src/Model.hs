@@ -10,6 +10,7 @@ data Player = Player
   }
 
 data GameStage = Started | Complete
+  deriving (Show)
 
 type Dictionary = Trie ()
 
@@ -20,7 +21,6 @@ type Word = NonEmpty Char
 data Game = Game
   { activePlayer :: PlayerNumber,
     players :: Array PlayerNumber Player,
-    playersCount :: Int,
     usedWords :: Dictionary,
     allowedWords :: Dictionary,
     gameStage :: GameStage
