@@ -12,14 +12,21 @@ library
   exposed-modules:
       Add
       Application
+      Error.Handler
       Foundation
+      Gameplay
       Home
+      Model
   other-modules:
       Paths_wordest_back_end
   hs-source-dirs:
       src
   build-depends:
-      base
+      MissingH
+    , array
+    , base
+    , bytestring
+    , bytestring-trie
     , yesod-core
   default-language: Haskell2010
 
@@ -31,7 +38,31 @@ executable wordest-back-end
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base
+      MissingH
+    , array
+    , base
+    , bytestring
+    , bytestring-trie
+    , wordest-back-end
+    , yesod-core
+  default-language: Haskell2010
+
+test-suite wordest-back-end-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      GameplaySpec
+      Paths_wordest_back_end
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      MissingH
+    , array
+    , base
+    , bytestring
+    , bytestring-trie
+    , hspec
     , wordest-back-end
     , yesod-core
   default-language: Haskell2010
